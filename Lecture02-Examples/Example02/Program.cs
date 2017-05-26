@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Example02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(1.0 / 2.0 * 3.0); // 要補" .0" 小數點後一位，否則會出問題
+            Console.WriteLine(1 / 2 * 3.0);
+            Console.WriteLine(1 / 2.0 * 3.0);
+            Console.WriteLine(1 / 2 * 3);
+        }
+    }
+}
