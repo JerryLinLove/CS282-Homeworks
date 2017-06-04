@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Example03
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            string sql = 
+            string sql =
                 @"select * from Table
                     where id > 10
-                    ";
+                    ";              // ==> 加入一大串文字，採用 @"的方式進行
             Console.WriteLine(sql);
 
             string path = "C:\\xampp\\htdoc\\"; //==> 要打兩個 // 因為 /有含意，故字串出現 / 則要打//

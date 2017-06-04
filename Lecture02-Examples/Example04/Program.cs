@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Example04
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int[] numbers = new int[5];
             numbers[0] = 1;
@@ -19,8 +19,6 @@ namespace Example04
 
             Console.WriteLine(numbers[4]);
             Console.WriteLine(numbers.Length);
-
-
         }
     }
 }

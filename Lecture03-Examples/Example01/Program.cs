@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EasyMathLibrary;
 
 namespace Example01
 {
@@ -10,8 +11,9 @@ namespace Example01
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine(0.1 + 0.2 == 0.3);    // 浮點數用於比較容易出問題
-            Console.WriteLine(1.2 + 1.3 == 2.5);
+            RandomGenerator random = new RandomGenerator();
+            Console.WriteLine(random.NextDouble(3.1, 5.5));
+            Console.WriteLine(random.NextDouble());
         }
     }
 }

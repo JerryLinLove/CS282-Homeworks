@@ -9,25 +9,31 @@ namespace Example05
     public class Person
     {
         public string Name;
-        public string Brithday;
+        public string Birthday;
         public string Email;
-        public string Pos;
-        public string Orientation;
+        public Position Pos;
+        public double Orientation;
 
         public void MoveForward(double distance)
         {
-            Pos.X = Pos.X + Math.Cos(Orientation * Math.PI / 180.0);
-            Pos.Y = Pos.Y + Math.Sin(Orientation * Math.PI / 180.0);
+            Pos.X = Pos.X + distance * Math.Cos
+                (Orientation * Math.PI / 180.0);
+            Pos.Y = Pos.Y + distance * Math.Sin
+                (Orientation * Math.PI / 180.0);
         }
 
-        public void TrunRight (double angle)
+        public void TurnRight(double angle)
         {
             Orientation = Orientation + angle;
+            if (Orientation >= 360)
+            {
+                Orientation -= 360;
+            }
         }
 
         public void ShowPosition()
         {
-            Console.WriteLine("{0}的位置:({1}, {2}) 方位：{3}度, Name, Pos.X, Pos.Y, Orientation");
+            Console.WriteLine("{0}的位置:({1}, {2}) 方位：{3}度", Name, Pos.X, Pos.Y, Orientation);
         }
 
         public void DrawSquare(double width)
@@ -35,15 +41,32 @@ namespace Example05
             for (var count = 0; count < 4; count++)
             {
                 this.MoveForward(width);
-                this.TrunRight(90);
+                this.TurnRight(90);
                 this.ShowPosition();
             }
         }
 
-        public void DrawSquare()
+        public void DrawSquare()    //利用已經寫好的程式，只是不給範圍，強制給預設範圍
         {
             DrawSquare(100);
         }
 
+        public void DrawRectangle(double length, double width)
+        {
+            for (var count = 0; count < 2; count++)
+            {
+                this.MoveForward(length);
+                this.TurnRight(90);
+                this.ShowPosition();
+                this.MoveForward(width);
+                this.TurnRight(90);
+                this.ShowPosition();
+            }
+        }
+
+        public void DrawRectangle()
+        {
+            DrawRectangle(50, 100);
+        }
     }
 }

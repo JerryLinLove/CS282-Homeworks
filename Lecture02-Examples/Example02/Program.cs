@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Example02
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine(1.0 / 2.0 * 3.0); // 要補" .0" 小數點後一位，否則會出問題
+            Console.WriteLine(1 / 2 * 3);       // 要補".0" 小數點後一位，否則程式會整數進行運算
+            Console.WriteLine(1.0 / 2.0 * 3.0);
             Console.WriteLine(1 / 2 * 3.0);
             Console.WriteLine(1 / 2.0 * 3.0);
             Console.WriteLine(1 / 2 * 3);
