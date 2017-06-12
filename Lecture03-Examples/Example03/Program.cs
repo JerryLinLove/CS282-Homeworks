@@ -16,7 +16,7 @@ namespace Example03
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WeatherPanel());
+            Application.Run(new MainForm());
         }
     }
 }

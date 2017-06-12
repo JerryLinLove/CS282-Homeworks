@@ -12,7 +12,7 @@ namespace Example01
         private static void Main(string[] args)
         {
             RandomGenerator random = new RandomGenerator();
-            Console.WriteLine(random.NextDouble(3.1, 5.5));
+            Console.WriteLine(random.NextDouble(3.12, 3.12));
             Console.WriteLine(random.NextDouble());
         }
     }
